@@ -1,0 +1,490 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #08080D;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* Variáveis do projeto*/
+
+:root{
+
+    --roxo-principal: #C63EFF;
+    --roxo-secundario: #8F2BFF;
+    --azul-neon: #5D5CFF;
+    --rosa-neon: #FF48F5;
+
+    --fundo-principal: #08080D;
+    --fundo-secundario: #111118;
+    --fundo-card: #1A1A24;
+
+    --texto-principal: #FFFFFF;
+    --texto-secundario: #C7C7D1;
+    --gradiente:
+    linear-gradient(
+        90deg,
+        #5D5CFF,
+        #C63EFF,
+        #FF48F5
+    );
+
+    --sombra:
+    0 8px 25px rgba(198, 62, 255, 0.25);
+    --largura-maxima: 1200px;
+}
+
+
+.container{
+    width: 90%;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+}
+
+
+header{
+    background-color: rgba(8, 8, 13, 0.95);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+header img{
+    width: 90px;
+}
+
+
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    color: var(--texto-principal);
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: var(--roxo-principal);
+}
+
+
+.banner-interno{
+    text-align: center;
+
+    padding: 110px 20px;
+
+    background:
+    linear-gradient(
+        rgba(8,8,13,0.85),
+        rgba(8,8,13,0.85)
+    ),
+    url("../assets/img/setup-gamer.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-interno h1{
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+}
+
+.banner-interno p{
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--texto-secundario);
+}
+
+/* história da empresa */
+
+.historia{
+    padding: 100px 0;
+}
+
+.historia h2{
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 50px;
+}
+
+.historia-conteudo{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.texto-historia{
+    flex: 1;
+}
+
+.texto-historia p{
+    color: var(--texto-secundario);
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
+
+.imagem-historia{
+    flex: 1;
+}
+
+.imagem-historia img{
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+}
+
+
+/* missão, visão e valores */
+
+.institucional{
+    padding: 100px 0;
+
+    background-color: var(--fundo-secundario);
+}
+
+.cards-institucionais{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.card-institucional{
+    background-color: var(--fundo-card);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.card-institucional:hover{
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+}
+
+.card-institucional h3{
+    font-family: 'Exo 2', sans-serif;
+
+    margin-bottom: 20px;
+
+    color: var(--roxo-principal);
+}
+
+.card-institucional p{
+    color: var(--texto-secundario);
+}
+
+.card-institucional ul li{
+    margin-bottom: 10px;
+
+    color: var(--texto-secundario);
+}
+
+
+/* Linha do tempo */
+
+.linha-tempo{
+    padding: 100px 0;
+}
+
+.linha-tempo h2{
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 60px;
+}
+
+.timeline{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.evento{
+    background-color: var(--fundo-card);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.evento:hover{
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+}
+
+.evento h3{
+    font-family: 'Exo 2', sans-serif;
+
+    color: var(--roxo-principal);
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+.evento p{
+    color: var(--texto-secundario);
+}
+
+
+/* Equipe */
+
+.equipe{
+    padding: 100px 0;
+
+    background-color: var(--fundo-secundario);
+}
+
+.equipe h2{
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 50px;
+}
+
+.cards-equipe{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.membro{
+    background-color: var(--fundo-card);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.membro:hover{
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra);
+}
+
+.membro img{
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.membro h3{
+    margin-top: 20px;
+
+    font-family: 'Exo 2', sans-serif;
+}
+
+.membro p{
+    padding: 0 20px;
+
+    color: var(--texto-secundario);
+
+    margin-top: 10px;
+}
+
+.membro p:last-child{
+    padding-bottom: 25px;
+}
+
+
+/* footer */
+
+footer{
+    background-color: #050508;
+
+    padding-top: 60px;
+}
+
+footer .container{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 40px;
+}
+
+footer h3{
+    margin-bottom: 15px;
+
+    font-family: 'Exo 2', sans-serif;
+}
+
+footer p,
+footer a{
+    color: var(--texto-secundario);
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+footer a:hover{
+    color: var(--roxo-principal);
+}
+
+
+
+footer > div:last-child{
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* Responsividade tablets */
+
+@media (max-width: 900px){
+
+    .historia-conteudo{
+        flex-direction: column;
+    }
+
+    .banner-interno h1{
+        font-size: 2.8rem;
+    }
+
+    .historia h2,
+    .linha-tempo h2,
+    .equipe h2{
+        font-size: 2rem;
+    }
+
+}
+
+
+/* Responsividade celulares */
+
+@media (max-width: 600px){
+
+    /* Header */
+
+    header .container{
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    /* Banner */
+
+    .banner-interno{
+        padding: 80px 20px;
+    }
+
+    .banner-interno h1{
+        font-size: 2.2rem;
+    }
+
+    /* Títulos */
+
+    .historia h2,
+    .linha-tempo h2,
+    .equipe h2{
+        font-size: 1.8rem;
+    }
+
+    /* História */
+
+    .texto-historia p{
+        text-align: left;
+    }
+
+    /* Cards Equipe */
+
+    .membro img{
+        height: 250px;
+    }
+
+}
