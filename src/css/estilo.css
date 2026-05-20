@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #08080D;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* Variáveis do projeto */
+:root{
+    /* Cores */
+    --roxo-principal: #C63EFF;
+    --roxo-secundario: #8F2BFF;
+    --azul-neon: #5D5CFF;
+    --rosa-neon: #FF48F5;
+    --fundo-principal: #08080D;
+    --fundo-secundario: #111118;
+    --fundo-card: #1A1A24;
+    --texto-principal:#FFFFFF;
+    --texto-secundario: #C7C7D1;
+    --gradiente:
+    linear-gradient(
+        90deg,
+        #5D5CFF,
+        #C63EFF,
+        #FF48F5
+    );
+    --sombra:
+    0 8px 25px rgba(198, 62, 255, 0.25);
+    --largura-maxima: 1200px;
+}
+.container{
+    width: 90%;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+}
+header{
+ background-color: rgba(8, 8, 13, 0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+/* Logo */
+
+header img{
+    width: 90px;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    color: var(--texto-principal);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: var(--roxo-principal);
+}
+/* Hero section */
+
+.hero{
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+
+    width: 90%;
+    max-width: var(--largura-maxima);
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+}
+
+.hero-conteudo{
+    flex: 1;
+}
+
+.hero h1{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 4rem;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero h2{
+    color: var(--roxo-principal);
+
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    color: var(--texto-secundario);
+
+    margin-bottom: 30px;
+
+    max-width: 550px;
+}
+
+
+.hero-imagem{
+    flex: 1;
+}
+
+.hero-imagem img{
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.hero-botoes{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-botoes a{
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.hero-botoes a:first-child{
+    background: var(--gradiente);
+    color: white;
+}
+
+.hero-botoes a:last-child{
+    border: 2px solid var(--roxo-principal);
+    color: white;
+}
+
+.hero-botoes a:hover{
+    transform: translateY(-3px);
+}
+/* Produtos em destaque */ 
+
+.destaques{
+    padding: 100px 0;
+}
+
+.destaques h2{
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+}
+
+.destaques > .container > p{
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    margin-bottom: 50px;
+}
+
+
+/* Grid de Cards */
+
+.cards-produtos{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+/* Cards de produto*/ 
+
+.card{
+    background-color: var(--fundo-card);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: var(--sombra);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 20px 20px 10px;
+}
+
+.card p{
+    padding: 0 20px;
+
+    color: var(--texto-secundario);
+
+    min-height: 80px;
+}
+
+.card a{
+    display: inline-block;
+
+    margin: 20px;
+
+    background: var(--gradiente);
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+/* Diferenciais */
+
+.diferenciais{
+    padding: 100px 0;
+
+    background-color: var(--fundo-secundario);
+}
+
+.diferenciais h2{
+    text-align: center;
+
+    font-size: 2.4rem;
+
+    margin-bottom: 50px;
+
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+/* Grid Diferenciais */
+
+.lista-diferenciais{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.lista-diferenciais article{
+    background-color: var(--fundo-card);
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.lista-diferenciais h3{
+    margin-bottom: 15px;
+}
+
+.lista-diferenciais p{
+    color: var(--texto-secundario);
+}
+
+/* Banner de promoção */
+
+.promocao{
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.promocao .container{
+    background: var(--gradiente);
+
+    padding: 70px 30px;
+
+    border-radius: 25px;
+}
+
+.promocao h2{
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+
+    font-family: 'Exo 2', sans-serif;
+}
+
+.promocao p{
+    margin-bottom: 30px;
+}
+
+.promocao a{
+    background-color: white;
+
+    color: #111;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+.promocao a:hover{
+    transform: translateY(-3px);
+}
+
+/* Footer*/ 
+
+footer{
+    background-color: #050508;
+
+    margin-top: 80px;
+
+    padding-top: 60px;
+}
+
+footer .container{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 40px;
+}
+
+footer h3{
+    margin-bottom: 15px;
+
+    font-family: 'Exo 2', sans-serif;
+}
+
+footer p,
+footer a{
+    color: var(--texto-secundario);
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+footer a:hover{
+    color: var(--roxo-principal);
+}
+
+
+footer > div:last-child{
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* responsividade tablets */
+
+@media (max-width: 900px){
+
+    .hero{
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botoes{
+        justify-content: center;
+    }
+
+    .hero h1{
+        font-size: 3rem;
+    }
+}
+
+
+/* responsividade celulares */
+
+@media (max-width: 600px){
+
+    header .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        padding: 60px 0;
+    }
+
+    .hero h1{
+        font-size: 2.3rem;
+    }
+
+    .hero h2{
+        font-size: 1.3rem;
+    }
+
+    .destaques h2,
+    .diferenciais h2{
+        font-size: 2rem;
+    }
+
+    .promocao h2{
+        font-size: 2rem;
+    }
+
+    .hero-botoes{
+        flex-direction: column;
+    }
+
+    .hero-botoes a{
+        width: 100%;
+        text-align: center;
+    }
+}
