@@ -117,17 +117,20 @@ nav a:hover{
 .banner-interno{
     text-align: center;
 
-    padding: 100px 20px;
+    padding: 110px 20px;
 
     background:
-    linear-gradient(
-        rgba(8,8,13,0.85),
-        rgba(8,8,13,0.85)
+    radial-gradient(
+        circle at top left,
+        rgba(255,72,245,0.25),
+        transparent 40%
     ),
-    url("../assets/img/setup-gamer.jpg");
-
-    background-size: cover;
-    background-position: center;
+    radial-gradient(
+        circle at bottom right,
+        rgba(93,92,255,0.25),
+        transparent 40%
+    ),
+    #08080D;
 }
 
 .banner-interno h1{

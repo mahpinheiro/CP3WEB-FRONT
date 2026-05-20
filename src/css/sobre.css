@@ -115,14 +115,17 @@ nav a:hover{
     padding: 110px 20px;
 
     background:
-    linear-gradient(
-        rgba(8,8,13,0.85),
-        rgba(8,8,13,0.85)
+    radial-gradient(
+        circle at top left,
+        rgba(255,72,245,0.25),
+        transparent 40%
     ),
-    url("../assets/img/setup-gamer.jpg");
-
-    background-size: cover;
-    background-position: center;
+    radial-gradient(
+        circle at bottom right,
+        rgba(93,92,255,0.25),
+        transparent 40%
+    ),
+    #08080D;
 }
 
 .banner-interno h1{
@@ -295,76 +298,6 @@ nav a:hover{
     color: var(--texto-secundario);
 }
 
-
-/* Equipe */
-
-.equipe{
-    padding: 100px 0;
-
-    background-color: var(--fundo-secundario);
-}
-
-.equipe h2{
-    text-align: center;
-
-    font-family: 'Exo 2', sans-serif;
-
-    font-size: 2.5rem;
-
-    margin-bottom: 50px;
-}
-
-.cards-equipe{
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 30px;
-}
-
-.membro{
-    background-color: var(--fundo-card);
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    text-align: center;
-
-    transition: 0.3s;
-}
-
-.membro:hover{
-    transform: translateY(-8px);
-
-    box-shadow: var(--sombra);
-}
-
-.membro img{
-    width: 100%;
-    height: 300px;
-
-    object-fit: cover;
-}
-
-.membro h3{
-    margin-top: 20px;
-
-    font-family: 'Exo 2', sans-serif;
-}
-
-.membro p{
-    padding: 0 20px;
-
-    color: var(--texto-secundario);
-
-    margin-top: 10px;
-}
-
-.membro p:last-child{
-    padding-bottom: 25px;
-}
 
 
 /* footer */
