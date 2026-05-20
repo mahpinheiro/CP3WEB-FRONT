@@ -1,0 +1,467 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #08080D;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* Variáveis do projeto */
+
+:root{
+
+    /* Cores principais */
+    --roxo-principal: #C63EFF;
+    --roxo-secundario: #8F2BFF;
+    --azul-neon: #5D5CFF;
+    --rosa-neon: #FF48F5;
+
+    /* Fundos */
+    --fundo-principal: #08080D;
+    --fundo-secundario: #111118;
+    --fundo-card: #1A1A24;
+
+    /* Textos */
+    --texto-principal: #FFFFFF;
+    --texto-secundario: #C7C7D1;
+
+    /* Gradiente principal */
+    --gradiente:
+    linear-gradient(
+        90deg,
+        #5D5CFF,
+        #C63EFF,
+        #FF48F5
+    );
+
+    /* Sombra padrão */
+    --sombra:
+    0 8px 25px rgba(198, 62, 255, 0.25);
+
+    /* Largura máxima */
+    --largura-maxima: 1200px;
+}
+
+.container{
+    width: 90%;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+}
+
+header{
+    background-color: rgba(8, 8, 13, 0.95);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+header img{
+    width: 90px;
+}
+
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav a{
+    color: var(--texto-principal);
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: var(--roxo-principal);
+}
+
+/* Banner interno */
+
+.banner-interno{
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+    linear-gradient(
+        rgba(8,8,13,0.85),
+        rgba(8,8,13,0.85)
+    ),
+    url("../assets/img/setup-gamer.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-interno h1{
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+}
+
+.banner-interno p{
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--texto-secundario);
+}
+
+/* Catálogo de produtos */ 
+
+.produtos{
+    padding: 100px 0;
+}
+
+.produtos h2{
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 50px;
+}
+
+
+.grid-produtos{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+}
+
+
+/* Card de produto */
+
+.card-produto{
+    background-color: var(--fundo-card);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.card-produto:hover{
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra);
+}
+
+
+.card-produto img{
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+.card-produto h3{
+    padding: 20px 20px 10px;
+
+    font-size: 1.2rem;
+}
+
+
+.card-produto p{
+    padding: 0 20px;
+
+    color: var(--texto-secundario);
+
+    min-height: 90px;
+}
+
+
+.card-produto span{
+    display: block;
+
+    margin: 20px;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: var(--roxo-principal);
+}
+
+
+/* Tabela de promoções */
+
+.promocoes{
+    padding: 100px 0;
+
+    background-color: var(--fundo-secundario);
+}
+
+.promocoes h2{
+    text-align: center;
+
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 40px;
+}
+
+
+table{
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+
+thead{
+    background: var(--gradiente);
+}
+
+thead th{
+    padding: 18px;
+
+    text-align: center;
+}
+
+
+tbody tr{
+    background-color: var(--fundo-card);
+
+    transition: 0.3s;
+}
+
+tbody tr:nth-child(even){
+    background-color: #222231;
+}
+
+tbody tr:hover{
+    background-color: #2B2B3C;
+}
+
+
+td{
+    padding: 18px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+}
+
+
+/* CTA */
+
+.cta{
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.cta h2{
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 2.8rem;
+
+    margin-bottom: 20px;
+}
+
+.cta p{
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    color: var(--texto-secundario);
+}
+
+
+/* Botão CTA */
+
+.cta a{
+    display: inline-block;
+
+    background: var(--gradiente);
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.cta a:hover{
+    transform: translateY(-3px);
+}
+
+
+/* footer */
+
+footer{
+    background-color: #050508;
+
+    margin-top: 60px;
+
+    padding-top: 60px;
+}
+
+footer .container{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 40px;
+}
+
+footer h3{
+    margin-bottom: 15px;
+
+    font-family: 'Exo 2', sans-serif;
+}
+
+footer p,
+footer a{
+    color: var(--texto-secundario);
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+footer a:hover{
+    color: var(--roxo-principal);
+}
+
+
+footer > div:last-child{
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* Responsividade tablets */
+
+@media (max-width: 900px){
+
+    .banner-interno h1{
+        font-size: 2.8rem;
+    }
+
+    .produtos h2,
+    .promocoes h2{
+        font-size: 2rem;
+    }
+
+}
+
+
+/* Responsividade celulares  */
+
+@media (max-width: 600px){
+
+    /* Header */
+
+    header .container{
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    /* Banner */
+
+    .banner-interno{
+        padding: 70px 20px;
+    }
+
+    .banner-interno h1{
+        font-size: 2.2rem;
+    }
+
+    /* Títulos */
+
+    .produtos h2,
+    .promocoes h2,
+    .cta h2{
+        font-size: 1.8rem;
+    }
+
+    /* Cards */
+
+    .card-produto p{
+        min-height: auto;
+    }
+
+    /* Tabela */
+
+    table{
+        display: block;
+
+        overflow-x: auto;
+    }
+
+    th,
+    td{
+        white-space: nowrap;
+    }
+
+}
