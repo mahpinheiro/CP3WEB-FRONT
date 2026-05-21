@@ -94,6 +94,8 @@ const formulario = document.querySelector("form");
 if (formulario) {
 
     formulario.addEventListener("submit", function (event) {
+        event.preventDefault();
+        
 
         const nome =
         document.getElementById("nome");
@@ -140,9 +142,8 @@ if (formulario) {
 
         }
 
-        alert(
-            "Mensagem enviada com sucesso!"
-        );
+        mostrarMensagemSucesso();
+        formulario.reset();
 
     });
 
@@ -171,3 +172,39 @@ botoes.forEach(function (botao) {
     });
 
 });
+function mostrarMensagemSucesso(){
+
+    const mensagem = document.createElement("div");
+
+    mensagem.innerHTML = `
+        <strong>✓ Mensagem enviada!</strong><br>
+        Nossa equipe retornará em breve através do e-mail informado.
+    `;
+
+    mensagem.style.position = "fixed";
+    mensagem.style.top = "20px";
+    mensagem.style.right = "20px";
+
+    mensagem.style.padding = "20px";
+
+    mensagem.style.background =
+    "linear-gradient(90deg,#5D5CFF,#C63EFF,#FF48F5)";
+
+    mensagem.style.color = "#fff";
+
+    mensagem.style.borderRadius = "12px";
+
+    mensagem.style.boxShadow =
+    "0 8px 20px rgba(0,0,0,.3)";
+
+    mensagem.style.zIndex = "9999";
+
+    document.body.appendChild(mensagem);
+
+    setTimeout(function(){
+
+        mensagem.remove();
+
+    }, 4000);
+
+}
